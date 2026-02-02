@@ -41,3 +41,20 @@ button {
 button:hover {
   transform: scale(1.1);
 }
+.heart {
+  position: fixed;
+  top: -10px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) translateX(0);
+  }
+  50% {
+    transform: translateY(50vh) translateX(40px);
+  }
+  100% {
+    transform: translateY(110vh) translateX(-40px);
+  }
+}
