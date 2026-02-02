@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   background: #ffb6c1;
   overflow: hidden;
   font-family: 'Comic Sans MS', cursive;
@@ -14,72 +14,53 @@ body {
 .container {
   position: relative;
   z-index: 5;
+  padding: 20px;
+  width: 95%;
+  max-width: 500px;
 }
 
 .main-img {
-  width: 260px;
+  width: 85%;
+  max-width: 320px;
   border-radius: 20px;
   margin-bottom: 20px;
 }
 
 h1 {
   color: #b0005f;
+  font-size: 28px;
+  line-height: 1.2;
 }
 
 button {
   background: #ff4f9a;
   border: none;
-  padding: 12px 28px;
-  margin: 10px;
-  font-size: 18px;
-  border-radius: 25px;
+  padding: 16px 34px;
+  margin: 12px;
+  font-size: 20px;
+  border-radius: 30px;
   cursor: pointer;
   color: white;
-  position: relative;
+  min-width: 140px;
 }
 
 button:hover {
   transform: scale(1.1);
 }
-.heart {
-  position: fixed;
-  top: -10px;
-  animation: fall linear infinite;
-}
 
-@keyframes fall {
-  0% {
-    transform: translateY(-10vh) translateX(0);
-  }
-  50% {
-    transform: translateY(50vh) translateX(40px);
-  }
-  100% {
-    transform: translateY(110vh) translateX(-40px);
-  }
-}
+/* Hearts */
 .heart {
   position: fixed;
   top: -5vh;
-  font-size: 20px;
+  font-size: 26px;
   animation: drop linear infinite;
   pointer-events: none;
 }
 
 @keyframes drop {
-  0% {
-    transform: translateY(-10vh) translateX(0);
-  }
-  25% {
-    transform: translateY(25vh) translateX(30px);
-  }
-  50% {
-    transform: translateY(50vh) translateX(-30px);
-  }
-  75% {
-    transform: translateY(75vh) translateX(20px);
-  }
-  100% {
-    transform: translateY(110vh) translateX(-20px);
-  }
+  0% { transform: translateY(-10vh) translateX(0); }
+  25% { transform: translateY(25vh) translateX(30px); }
+  50% { transform: translateY(50vh) translateX(-30px); }
+  75% { transform: translateY(75vh) translateX(20px); }
+  100% { transform: translateY(110vh) translateX(-20px); }
 }
