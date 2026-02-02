@@ -5,6 +5,17 @@
   <title>Valentine?</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+for (let i = 0; i < 25; i++) {
+  let heart = document.createElement("div");
+  heart.innerHTML = "💖";
+  heart.className = "heart";
+  heart.style.left = Math.random()*100 + "vw";
+  heart.style.animationDuration = (3 + Math.random()*5) + "s";
+  heart.style.fontSize = (15 + Math.random()*25) + "px";
+  document.body.appendChild(heart);
+}
+</script>
 <body>
 
   <div class="hearts"></div>
