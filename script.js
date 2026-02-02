@@ -11,34 +11,30 @@ function no() {
   if (noCount === 1) {
     buttons.innerHTML = `
       <button onclick="yes()">Yes</button>
-      <button id="noBtn">Really?</button>
+      <button id="noBtn" onmouseover="runAway()">Really?</button>
     `;
   } else if (noCount === 2) {
     buttons.innerHTML = `
       <button onclick="yes()">Yes</button>
-      <button id="noBtn">Are you sure about it?</button>
+      <button id="noBtn" onmouseover="runAway()">Are you sure?</button>
     `;
   } else {
     buttons.innerHTML = `
       <button onclick="yes()">Yes</button>
     `;
   }
-
-  makeRunAway();
 }
 
-function makeRunAway() {
-  const noBtn = document.getElementById("noBtn");
-  if (!noBtn) return;
+function runAway() {
+  const btn = document.getElementById("noBtn");
 
-  noBtn.addEventListener("mouseover", () => {
-    const x = Math.random() * (window.innerWidth - 100);
-    const y = Math.random() * (window.innerHeight - 100);
+  const maxX = window.innerWidth - btn.offsetWidth - 20;
+  const maxY = window.innerHeight - btn.offsetHeight - 20;
 
-    noBtn.style.position = "absolute";
-    noBtn.style.left = `${x}px`;
-    noBtn.style.top = `${y}px`;
-  });
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
 
-  noBtn.addEventListener("click", no);
+  btn.style.position = "fixed";
+  btn.style.left = x + "px";
+  btn.style.top = y + "px";
 }
