@@ -58,3 +58,28 @@ button:hover {
     transform: translateY(110vh) translateX(-40px);
   }
 }
+.heart {
+  position: fixed;
+  top: -5vh;
+  font-size: 20px;
+  animation: drop linear infinite;
+  pointer-events: none;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-10vh) translateX(0);
+  }
+  25% {
+    transform: translateY(25vh) translateX(30px);
+  }
+  50% {
+    transform: translateY(50vh) translateX(-30px);
+  }
+  75% {
+    transform: translateY(75vh) translateX(20px);
+  }
+  100% {
+    transform: translateY(110vh) translateX(-20px);
+  }
+}
