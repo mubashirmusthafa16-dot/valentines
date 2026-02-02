@@ -13,7 +13,7 @@ function no() {
       <button onclick="yes()">Yes💖</button>
       <button id="noBtn" onmouseover="runAway()">Really??</button>
     `;
-  } else if (noCount === 2) {
+  } if (noCount === 2) {
     buttons.innerHTML = `
       <button onclick="yes()">Yes💖</button>
       <button id="noBtn" onmouseover="runAway()">Are you sure??</button>
