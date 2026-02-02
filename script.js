@@ -38,3 +38,28 @@ function runAway() {
   btn.style.left = x + "px";
   btn.style.top = y + "px";
 }
+const reallyBtn = document.getElementById("reallyBtn");
+
+function moveButton() {
+  const btnWidth = reallyBtn.offsetWidth;
+  const btnHeight = reallyBtn.offsetHeight;
+
+  const maxX = window.innerWidth - btnWidth - 20;
+  const maxY = window.innerHeight - btnHeight - 20;
+
+  const randomX = Math.random() * maxX;
+  const randomY = Math.random() * maxY;
+
+  reallyBtn.style.position = "absolute";
+  reallyBtn.style.left = randomX + "px";
+  reallyBtn.style.top = randomY + "px";
+}
+
+// Move on hover (mouse / touch)
+reallyBtn.addEventListener("mouseover", moveButton);
+
+// Move on click (mobile friendly)
+reallyBtn.addEventListener("click", moveButton);
+
+// Move on touch (extra safety for phones)
+reallyBtn.addEventListener("touchstart", moveButton);
