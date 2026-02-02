@@ -10,17 +10,17 @@ function no() {
 
   if (noCount === 1) {
     buttons.innerHTML = `
-      <button onclick="yes()">Yes</button>
-      <button id="noBtn" onmouseover="runAway()">Really?</button>
+      <button onclick="yes()">Yes💖</button>
+      <button id="noBtn" onmouseover="runAway()">Really??</button>
     `;
   } else if (noCount === 2) {
     buttons.innerHTML = `
-      <button onclick="yes()">Yes</button>
-      <button id="noBtn" onmouseover="runAway()">Are you sure?</button>
+      <button onclick="yes()">Yes💖</button>
+      <button id="noBtn" onmouseover="runAway()">Are you sure??</button>
     `;
   } else {
     buttons.innerHTML = `
-      <button onclick="yes()">Yes</button>
+      <button onclick="yes()">Yes💖</button>
     `;
   }
 }
