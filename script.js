@@ -11,7 +11,7 @@ function no() {
   if (noCount === 1) {
     buttons.innerHTML = `
       <button onclick="yes()">Yes💖</button>
-      <button id="noBtn" onmouseover="runAway()">Really??</button>
+      <button id="noBtn" onmouseover="runAway()">Really??🥺</button>
     `;
   } if (noCount === 2) {
     buttons.innerHTML = `
